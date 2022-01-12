@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Economica', sans-serif;
+    background-color: #8db6d4
+}
+
+body {
+    font-family: 'Economica', sans-serif;
+    color: whitesmoke;
+    margin: 30px;
+    line-height: 1.5;
+    
+}
+
+h1{
+    font-size: 45px;
+    margin: 10px;
+    line-height: 1.25;
+    font-weight: 200;
+    text-align: center;
+}
+
+.card-text {
+    text-align: right;
+    margin-right: 900px;
+}
+    
+
+.card {
+    margin: 0 0 20px 0;
+    background-color: #8db6d4;
+    /* border: none; */
+}
+  
+  .card-body {
+    padding: 3%;
+  }
+
+.input-group {
+    width: 400px;
+    align-items: left;
+}
+
+.btn {
+    color: white;
+    background-color: #6789b0;
+    border: radius 0.3em; 
+}
+
+
