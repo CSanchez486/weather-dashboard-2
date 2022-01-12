@@ -1,12 +1,14 @@
-// double check if these are needed
-// var resultText = document.querySelector
 
 
-var currentDay = document.getElementById("currentDay");
-var apikey = 'e4e829dc730191eee614fe35436601e0';
-var searchForm = document.querySelector('.form-control');
+
+var currentDay = document.getElementById("currentDay"); //current time & day in header
+var apiKey = 'e4e829dc730191eee614fe35436601e0';
+var searchForm = document.getElementById('search-box');
 var searchCity = document.getElementsByClassName("form-control")[0];
 var weatherToday = document.getElementById("today");
+var fiveDay = document.getElementById("fiveDayForecast");
+var historyForecast = document.getElementById("historyForecast");
+var searchHistory = [];
 
 
 
@@ -19,10 +21,23 @@ function displayTime(){
 
 setInterval(displayTime,1000);
 
-// side-bar functionality 
+// searchbar functionality
+
+
+//Search history function that will be added to left sidebar.
+function listHistoryForecast () {
+    historyForecast.innerHTML = '';
+}
 
      
-// var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + ',&appid=' + key;
+var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + searchCity + ',&appid=' + apiKey;
+
+fetch (apiUrl)
+    .then(function(response) {
+        return response.json();
+    }).then(function (data){
+        renderItems(searchCity,data);
+    })
 
 // console.log(displayWeather)
 // .input-group - is search bar
