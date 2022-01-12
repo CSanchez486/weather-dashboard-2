@@ -39,8 +39,7 @@ fetch (apiUrl)
         renderItems(searchCity,data);
     })
 
-// console.log(displayWeather)
-// .input-group - is search bar
+
 
 
 let cities = [];
@@ -48,12 +47,6 @@ let cities = [];
 // this API website naming syntax that calls for a city
 // function getCityWeather(city, isClicked) {
     
-//     fetch((apiUrl)
-//     .then((response)=>{
-//         return response.json();
-//     })
-//     .then((m)))
-//     }
 
     //  Calling the API
     
@@ -63,6 +56,10 @@ let cities = [];
 
 // need to make a functional weather button
 
-// const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+//For loop needed for 5-day forecast
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
+for (let i = 0; len=days.length; text = " ", i < len; i++){
+
+};
 
