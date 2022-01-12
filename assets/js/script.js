@@ -59,7 +59,6 @@ let cities = [];
 //For loop needed for 5-day forecast
 var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
-for (let i = 0; len=days.length; text = " ", i < len; i++){
-
-};
+//working on code for loop 
+// for (let i = 0; len=days.length; text = " ", i < len; i++){ });
 
