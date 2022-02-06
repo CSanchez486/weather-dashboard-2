@@ -32,12 +32,12 @@ function listHistoryForecast () {
      
 var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + searchCity + ',&appid=' + apiKey;
 
-fetch (apiUrl)
-    .then(function(response) {
-        return response.json();
-    }).then(function (data){
-        renderItems(searchCity,data);
-    })
+// fetch (apiUrl)
+//     .then(function(response) {
+//         return response.json();
+//     }).then(function (data){
+//         renderItems(searchCity,data);
+//     })
 
 
 
