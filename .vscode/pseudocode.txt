@@ -1,0 +1,13 @@
+See weather in multiple cities.
+
+1. search for city > 
+    -present & future weather shown & [open weather API]
+    -added to search history [local storage]
+
+2.can view city name, date, icon of weather, temp,humidity, wind speed, and UV index.
+
+3. UV index has color indicator of condition
+
+4.view 5 day Forecast can view same as #2
+
+5. click on search history can view current & future conditions

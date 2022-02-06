@@ -1,4 +1,0 @@
-
-fetch
-console.log()
-
