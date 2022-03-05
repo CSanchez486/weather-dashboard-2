@@ -23,6 +23,42 @@ aside {
     align-items: right;
 }
 
+#buttonPlaceholder {
+    border-top: 3px solid rgb(11, 12, 53);
+    padding-top: 20px;
+    width: 50%;
+}
+
+.newCity {
+    background-color: rgb(172, 177, 189);
+    width: 100%;
+    border: none;
+    padding: 7px;
+    margin-bottom: 15px;
+}
+
+.newCity:hover {
+    background-color: rgb(41, 99, 223);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+#currentWeather {
+    width: 98%;
+    border: solid 2px black;
+    padding: 20px;
+    
+}
+
+#currentWeather p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#weatherIcon {
+    vertical-align: middle;
+}
+
 
 main {
     margin: 10px;
@@ -60,11 +96,6 @@ input {
     align-items: left;
 }
 
-/* .btn {
-    color: white;
-    background-color: #6789b0;
-    border: radius 0.3em; 
-} */
 
 #search-button {
     width: 10%;

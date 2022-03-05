@@ -23,13 +23,14 @@
             <h2>Search for a City:</h2>
             <input type="text" id="city" name="city" placeholder="San Diego"> 
             <button class="btn waves-effect waves-light" id="search-button">  &#9729;&#65039;  Search</button>
+            </aside>
 
             <div id="buttonPlaceholder">
                 <!--Place for buttons to be attached-->
             </div>
         </aside>
 
-        main id="mainPage" class="hidden">
+        <main id="mainPage" class="hidden">
                 <section id="currentWeather">
                     <!--Current Weather will generate here-->
                     <div>
@@ -49,20 +50,23 @@
         
     </div>
 
-    <main class="flex-row justify-space-between">
-        <div class="col" style="width: 30vw">
+    <div id="fiveDayForecast">
+        <h3>5 Day Forecast:</h3>
+        <div id="forecastBoxContainer">
+            <section>
+                <h4 id="futuredate1"></h4>
+                <div class="tooltip">
+                    <img data-icon="1" src="" alt="Weather icon"> 
+                    <span class="tooltiptext"></span>
+                </div>  
+                <p data-temp="1"></p>
+                <p data-wind="1"></p>
+                <p data-humidity="1"></p>
+            </section>
 
-            <div class="card"></div>
-                <form class="form" id="search-box" ></form>
-                <div class="input-group rounded">
-    
+    </div>
 
-                    <input type="search" class="form-control rounded inputValue" placeholder="Search Cities" aria-label="Search"
-                    aria-describedby="search-addon" />
-                    <button class="btn waves-effect waves-light" type="submit" name="action">&#9729;&#65039;
-                    </button> 
-            </div>
-        </div>
+
 
        
           
