@@ -226,14 +226,25 @@ function makeButtons(){
         getApi(city);
     })
 
+    // div is deleted from local storage each time delete button is clicked
     $(".deletion").on("click", function() {
         const btndelDiv = this.parentNode;
         btndelDiv.parentNode.removeChild(this.parentNode);
+        //prevSibling is the button, target it's id for index
         let prevSibling = this.previousElementSibling;
         const index = cities.indexOf(prevSibling.id);
         if (index > -1) {
             cities.splice(index, 1);
         }
+
+         //save new array
         localStorage.setItem("cities", JSON.stringify(cities));
     })
+}
+
+// clears old list and removed button placeholder
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
 }
