@@ -217,10 +217,13 @@ function makeButtons(){
         //append the button and deletion to the div, then append div to page
         btnPlusDelete.appendChild(citybtn);
         btnPlusDelete.appendChild(deletion);
-        buttonPlaceholder.appendChild(btnPlusDelete);
+        buttonPlaceholder.appendChild(btnPlusDelete);       
     }
 
-        
-    }
+    // getApi is ran when city button is clicked
+    $(".newCity").on("click", function(){
+        city = this.id;
+        getApi(city);
+    })
 
 }
