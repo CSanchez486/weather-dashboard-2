@@ -23,8 +23,6 @@
             <h2>Search for a City:</h2>
             <input type="text" id="city" name="city" placeholder="San Diego"> 
             <button class="btn waves-effect waves-light" id="search-button">  &#9729;&#65039;  Search</button>
-            </aside>
-
             <div id="buttonPlaceholder">
                 <!--Place for buttons to be attached-->
             </div>
@@ -47,73 +45,69 @@
                     <p class="inline">UV Index: </p>
                     <p id="uv" class="inline"></p>
                 </section>
-        
-    </div>
+    
 
-    <div id="fiveDayForecast">
-        <h3>5 Day Forecast:</h3>
-        <div id="forecastBoxContainer">
-            <section>
-                <h4 id="futuredate1"></h4>
-                <div class="tooltip">
-                    <img data-icon="1" src="" alt="Weather icon"> 
-                    <span class="tooltiptext"></span>
-                </div>  
-                <p data-temp="1"></p>
-                <p data-wind="1"></p>
-                <p data-humidity="1"></p>
-            </section>
-
-    </div>
-
-
-
-       
-          
-
-
-        <div class="col" style="width: 30vw">
-            <div class="card">
-                <h2> Search History </h2>
-                
-            </div>
-        </div>
-
-        <div class="card col-12 mol-md-4" id="today"></div>
-            <h2>Current Weather</h2>
-            <p id="currentDay" class="lead"></p>
-                
-                <p class="card-text">Temperature</p>
-                <p class="card-text">Humidity</p>                
-                <p class="card-text">Wind Speed</p>
-                <p class="card-text">UV Index</p>
-
-
-        <div class="card col-12 col-md-8" id="fiveDayForecast"></div>
-            <h2>5 Day Forecast</h2></2>
-
-       
-        <div class="card list col-12 col-md-8 float:left" id="historyForecast"></div>
-            <h2>Search History </h2>
-    </main>
-<!-- render result -->
-
-        
-  </div>
-
-
-    <div>
-<!-- search results -->
+                <div id="fiveDayForecast">
+                    <h3>5 Day Forecast:</h3>
+                    <div id="forecastBoxContainer">
+                        <section>
+                            <h4 id="futuredate1"></h4>
+                            <div class="tooltip">
+                                <img data-icon="1" src="" alt="Weather icon"> 
+                                <span class="tooltiptext"></span>
+                            </div>  
+                            <p data-temp="1"></p>
+                            <p data-wind="1"></p>
+                            <p data-humidity="1"></p>
+                        </section>
+                        <section>
+                            <h4 id="futuredate2"></h4>
+                            <div class="tooltip">
+                                <img data-icon="2" src="" alt="Weather icon"> 
+                                <span class="tooltiptext"></span>
+                            </div>  
+                            <p data-temp="2"></p>
+                            <p data-wind="2"></p>
+                            <p data-humidity="2"></p>
+                        </section>
+                        <section>
+                            <h4 id="futuredate3"></h4>
+                            <div class="tooltip">
+                                <img data-icon="3" src="" alt="Weather icon"> 
+                                <span class="tooltiptext"></span>
+                            </div>  
+                            <p data-temp="3"></p>
+                            <p data-wind="3"></p>
+                            <p data-humidity="3"></p>
+                        </section>
+                        <section> 
+                            <h4 id="futuredate4"></h4>
+                            <div class="tooltip">
+                                <img data-icon="4" src="" alt="Weather icon"> 
+                                <span class="tooltiptext"></span>
+                            </div>                              
+                            <p data-temp="4"></p>
+                            <p data-wind="4"></p>
+                            <p data-humidity="4"></p>
+                        </section>
+                        <section>
+                            <h4 id="futuredate5"></h4>
+                            <div class="tooltip">
+                                <img data-icon="5" src="" alt="Weather icon"> 
+                                <span class="tooltiptext"></span>
+                            </div>                                     
+                            <p data-temp="5"></p>
+                            <p data-wind="5"></p>
+                            <p data-humidity="5"></p>
+                        </section>
+                    </div>
+                </div>             
+        </main>       
     </div>
     
-    <div>
-<!-- 5 day forecast boxes -->
-    </div>
-
-<!-- JavaScript Bundle with Popper -->
         
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js" async defer></script>
 </body>
 </html>

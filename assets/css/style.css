@@ -123,3 +123,51 @@ input {
     text-align: left;
     margin: 10px;
 }
+#buttonPlaceholder {
+    border-top: 3px solid rgb(11, 12, 53);
+    padding-top: 20px;
+    width: 50%;
+}
+
+.newCity {
+    background-color: rgb(172, 177, 189);
+    width: 100%;
+    border: none;
+    padding: 7px;
+    margin-bottom: 15px;
+}
+
+.newCity:hover {
+    background-color: rgb(41, 99, 223);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+#currentWeather {
+    width: 98%;
+    border: solid 2px black;
+    padding: 20px;
+    
+}
+
+#currentWeather p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#weatherIcon {
+    vertical-align: middle;
+}
+
+.hidden {
+    display: none;
+}
+
+.favorable {
+    background-color: rgb(5, 71, 5);
+    max-width: fit-content;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    color: whitesmoke;
+
+}
