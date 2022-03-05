@@ -248,3 +248,12 @@ function removeAllChildNodes(parent) {
         parent.removeChild(parent.firstChild);
     }
 }
+
+function convertTemp(fahrenheit){
+    var celsius = ((fahrenheit - 32) * .5556).toFixed();
+    return celsius;
+}
+function convertSpeed(mph){
+    var kph = (mph * 1.609344).toFixed();
+    return kph;
+}
