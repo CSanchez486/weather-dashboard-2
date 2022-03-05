@@ -139,5 +139,35 @@ function fetchOneCall() {
             uv.className = "severe inline";
         }
 
+        //Update the date for 5 day forecast
+        $("#futuredate1").text(tomorrow.format("MM/DD/YY"));
+        $("#futuredate2").text(twoDays.format("MM/DD/YY"));
+        $("#futuredate3").text(threeDays.format("MM/DD/YY"));
+        $("#futuredate4").text(fourDays.format("MM/DD/YY"));
+        $("#futuredate5").text(fiveDays.format("MM/DD/YY"));
+        
+        //set the icon up in 5 day forecast 
+        //For each icon..
+        $("[data-icon]").each(function() {
+            //num is the number of the icon 1-5
+            var num = $(this).data("icon");
+            //plug num in to get the code for the day's icon
+            var iconCode = data.daily[num].weather[0].icon;
+            //plus iconCode in to the url
+            var iconURL = "http://openweathermap.org/img/w/" + iconCode + ".png";
+            //set the src of the current day's icon to be the iconURL
+            $(this).attr('src', iconURL);
+            //set the span text to be the current weather conditions (tooltip)
+            $(this).next().text(data.daily[num].weather[0].description);
+        })
+
+        // sets the temperature in the 5 day forecast
+        $("[data-temp]").each(function() {
+            var num = $(this).data("temp");
+            // converts num to number of day for 5 day forecast
+                var dailyCTemp = convertTemp(data.daily[num].temp.day);
+                $(this).text("Temp: " + data.daily[num].temp.day.toFixed() + "\xB0F / " + dailyCTemp + "\xB0C");
+        }
+        )
     });
 }
