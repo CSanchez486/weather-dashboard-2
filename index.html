@@ -17,10 +17,38 @@
 <body class="flex-column min-100-vh">
     <header class="hero">
         <h1>Weather Dashboard</h1>
-    
-        <i class="bi bi-search"></i>
     </header>
-    
+    <div>
+        <aside id="search">
+            <h2>Search for a City:</h2>
+            <input type="text" id="city" name="city" placeholder="San Diego"> 
+            <button class="btn waves-effect waves-light" id="search-button">  &#9729;&#65039;  Search</button>
+
+            <div id="buttonPlaceholder">
+                <!--Place for buttons to be attached-->
+            </div>
+        </aside>
+
+        main id="mainPage" class="hidden">
+                <section id="currentWeather">
+                    <!--Current Weather will generate here-->
+                    <div>
+                        <h2 id="currentCity" class="inline"></h2>
+                        <h2 id="currentDate" class="inline"></h2>
+                        <div id="currentIcon" class="tooltip">
+                            <img id="weatherIcon" src="" alt="Weather icon"> 
+                            <span class="tooltiptext"></span>
+                        </div>  
+                    </div>
+                    <p id="temp"> </p>
+                    <p id="wind"> </p>
+                    <p id="humidity"> </p>
+                    <p class="inline">UV Index: </p>
+                    <p id="uv" class="inline"></p>
+                </section>
+        
+    </div>
+
     <main class="flex-row justify-space-between">
         <div class="col" style="width: 30vw">
 
