@@ -139,29 +139,5 @@ function fetchOneCall() {
             uv.className = "severe inline";
         }
 
-
-
-
-// this API website naming syntax that calls for a city
-function getCityWeather(city, isClicked) {}
-    
-
-    //  Calling the API
-    
-
-// console.log(getCityWeather)
-
-
-// need to make a functional weather button
-var btn = document.querySelector('.btn')
-
-//For loop needed for 5-day forecast
-var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-
-//working on code for loop 
-// for (let i = 0; len=days.length; text = " ", i < len; i++)
-
-//Search history function that will be added to left sidebar.
-function listHistoryForecast() {
-    historyForecast.innerHTML = x;
+    });
 }
