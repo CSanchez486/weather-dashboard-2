@@ -194,3 +194,12 @@ function saveCities() {
     
     localStorage.setItem("cities", JSON.stringify(cities));
 }
+
+// button is made for each city that is searched
+function makeButtons(){
+    removeAllChildNodes(buttonPlaceholder);
+    cities = JSON.parse(localStorage.getItem("cities"));
+    cities = cities.sort();
+    for (let i=0; i<cities.length; i++){
+
+}
