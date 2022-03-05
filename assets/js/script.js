@@ -70,16 +70,46 @@ btn
 var cityUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + ',&appid=' + apiKey;
 
 
-
+// fetch request for city
 fetch (cityUrl)
     .then(function(res) {
+        // error message id city data doesn't pull up
         if (response.status !== 200) {
             alert("That city is not valid");
         }
         return response.json();
       })
-
-
+      .then(function (data) {
+        savedCity = data.name;
+        // pulls correct current weather icon
+        var iconcode = data.weather[0].icon;
+        var iconURL = "http://openweathermap.org/img/w/" + iconcode + ".png";
+        $('#weatherIcon').attr('src', iconURL);
+        $('#currentIcon').find('.tooltiptext').text(data.weather[0].description);
+        // main page is shown until button is clicked
+        mainPage.className = "";
+        // city gets saved
+        currentCity.textContent = savedCity;
+        // current date is shown 
+        $("#currentDate").text(today.format("(MM/DD/YY)"));
+        // conversions for temp and wind speed 
+        var curCTemp = convertTemp(data.main.temp);
+        var curKPH = convertSpeed(data.wind.speed);
+        temp.textContent = "Temp: " + data.main.temp.toFixed() + "\xB0F / " + curCTemp + "\xB0C";
+        wind.textContent = "Wind: " + data.wind.speed.toFixed() + " MPH / " + curKPH + " KPH";
+        humidity.textContent = "Humidity: " + data.main.humidity + "%";
+        // lat and onto eb pulled into OneCallAPI URL 
+        lat = data.coord.lat;
+        lon = data.coord.lon;
+        fetchOneCall();
+        // prevents redundant city buttons to be made 
+        if(document.getElementById(savedCity)){
+            return;
+        }
+        saveCities();  
+        makeButtons(); 
+    });
+}
 
 
 
