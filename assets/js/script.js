@@ -112,7 +112,9 @@ fetch (cityUrl)
 }
 
 function fetchOneCall() {
+    // pulls the lat and lon of current city
     var uvUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=,minutely,hourly,alerts&appid=" + APIKey + "&units=imperial";
+    // fetches UV and 5 day forecast data
     fetch(uvUrl)
     .then(function (response) {
         return response.json();
@@ -124,8 +126,21 @@ function fetchOneCall() {
         var fourDays  = moment().add(4,'days');
         var fiveDays  = moment().add(5,'days');
 
+        // UV index for the day
+        var todayUV = data.current.uvi;
+            uv.textContent = todayUV;
+        
+        // if/else statement that determines color indicator based on UV index
+        if (todayUV < 3) {
+            uv.className = "favorable inline";
+        } else if (todayUV >=3 && todayUV < 8) {
+           uv.className = "moderate inline";
+        } else {
+            uv.className = "severe inline";
+        }
 
-let cities = [];
+
+
 
 // this API website naming syntax that calls for a city
 function getCityWeather(city, isClicked) {}
