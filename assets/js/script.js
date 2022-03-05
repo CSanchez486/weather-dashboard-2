@@ -111,7 +111,18 @@ fetch (cityUrl)
     });
 }
 
-
+function fetchOneCall() {
+    var uvUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=,minutely,hourly,alerts&appid=" + APIKey + "&units=imperial";
+    fetch(uvUrl)
+    .then(function (response) {
+        return response.json();
+        })
+    .then(function (data) {
+        var tomorrow  = moment().add(1,'days');
+        var twoDays  = moment().add(2,'days');
+        var threeDays  = moment().add(3,'days');
+        var fourDays  = moment().add(4,'days');
+        var fiveDays  = moment().add(5,'days');
 
 
 let cities = [];
