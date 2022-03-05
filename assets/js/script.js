@@ -1,5 +1,6 @@
 //current time & day in header
 var currentDay = document.getElementById("currentDay"); 
+var currentCity = document.getElementById("currentCity");
 var city;
 var apiKey = '7312f736322322a27fef229205b4ab79';
 var searchForm = document.getElementById('search-box');
@@ -9,6 +10,17 @@ var fiveDay = document.getElementById("fiveDayForecast");
 var historyForecast = document.getElementById("historyForecast");
 var searchHistory = [];
 var searchButton = document.getElementById("search-button");
+var input = document.getElementById("city");
+var lat;
+var lon;
+var mainPage = document.getElementById("mainPage");
+var buttonPlaceholder = document.getElementById("buttonPlaceholder");
+var temp = document.getElementById("temp");
+var wind = document.getElementById("wind");
+var humidity = document.getElementById("humidity");
+var uv = document.getElementById("uv");
+var savedCity;
+var btnPlusDelete;
 
 
 // updates time element on header
@@ -20,9 +32,9 @@ function displayTime(){
 setInterval(displayTime,1000);
 
 // searchbar functionality
-searchButton.addEventListener("click", function() {
+searchButton.addEventListener("click", function(){
     city = input.value.trim();
-    if (city.includes(",")) {
+    if (city.includes(",")){
         var commas = city.split(",");
         getApi(commas[0]);
     } else {
