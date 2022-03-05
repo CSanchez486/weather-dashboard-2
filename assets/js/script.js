@@ -47,12 +47,19 @@ input.addEventListener("keyup", function(event) {
         searchButton.click();
     }
 });
+makeButtons();
+
+//function moves components to left side
+function getApi(city) {
+    document.getElementById("search").setAttribute("style", "width: 25%; padding: 0");
+    searchButton.setAttribute("style", "width: 100%");
+    input.setAttribute("style", "width: 100%");
+    buttonPlaceholder.setAttribute("style", "width:100%");
+
+    // the input field gets cleared
+    input.value = "";
 
 
-//Search history function that will be added to left sidebar.
-function listHistoryForecast() {
-    historyForecast.innerHTML = x;
-}
 
 for (var i = searchHistory.length - 1; i >= 0; i--) {
 btn
@@ -60,21 +67,18 @@ btn
 
 
 // fetch api URl then turn response into a json and show city and data 
-var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + ',&appid=' + apiKey;
+var cityUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + ',&appid=' + apiKey;
 
-function fetchAPI () {
 
-fetch (apiUrl)
+
+fetch (cityUrl)
     .then(function(res) {
-        return res.json();
-    }).then(function (data){
-        renderItems(city, data);
-    });
-    // .catch(function(err){
-    //     console.error("ERROR");
-    // });
+        if (response.status !== 200) {
+            alert("That city is not valid");
+        }
+        return response.json();
+      })
 
-}
 
 
 
@@ -100,3 +104,8 @@ var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "S
 
 //working on code for loop 
 // for (let i = 0; len=days.length; text = " ", i < len; i++)
+
+//Search history function that will be added to left sidebar.
+function listHistoryForecast() {
+    historyForecast.innerHTML = x;
+}
