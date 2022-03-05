@@ -169,5 +169,28 @@ function fetchOneCall() {
                 $(this).text("Temp: " + data.daily[num].temp.day.toFixed() + "\xB0F / " + dailyCTemp + "\xB0C");
         }
         )
+
+        // sets the wind in the 5 day forecast
+        $("[data-wind]").each(function() {
+            var num = $(this).data("wind");
+            var dailyKPH = convertSpeed(data.daily[num].wind_speed);
+            $(this).text("Wind: " + data.daily[num].wind_speed.toFixed() + " MPH / " + dailyKPH + " KPH");
+        })
+
+        // sets the humid in the 5 day forecast
+        $("[data-humidity]").each(function() {
+            var num = $(this).data("humidity");
+            $(this).text("Humidity: " + data.daily[num].humidity + "%");
+        })
     });
+}
+
+// cities are saved to local storage
+function saveCities() {
+    cities = JSON.parse(localStorage.getItem("cities")) || [];
+
+    var newCity = savedCity;
+    cities.push(newCity);
+    
+    localStorage.setItem("cities", JSON.stringify(cities));
 }
