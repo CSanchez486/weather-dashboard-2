@@ -1,5 +1,6 @@
-
-var currentDay = document.getElementById("currentDay"); //current time & day in header
+//current time & day in header
+var currentDay = document.getElementById("currentDay"); 
+var city;
 var apiKey = '7312f736322322a27fef229205b4ab79';
 var searchForm = document.getElementById('search-box');
 var searchCity = document.getElementsByClassName("form-control")[0];
@@ -7,7 +8,7 @@ var weatherToday = document.getElementById("today");
 var fiveDay = document.getElementById("fiveDayForecast");
 var historyForecast = document.getElementById("historyForecast");
 var searchHistory = [];
-
+var searchButton = document.getElementById("search-button");
 
 
 // updates time element on header
@@ -19,6 +20,21 @@ function displayTime(){
 setInterval(displayTime,1000);
 
 // searchbar functionality
+searchButton.addEventListener("click", function() {
+    city = input.value.trim();
+    if (city.includes(",")) {
+        var commas = city.split(",");
+        getApi(commas[0]);
+    } else {
+        getApi(city);
+    }
+});
+
+input.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        searchButton.click();
+    }
+});
 
 
 //Search history function that will be added to left sidebar.
