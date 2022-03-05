@@ -226,4 +226,14 @@ function makeButtons(){
         getApi(city);
     })
 
+    $(".deletion").on("click", function() {
+        const btndelDiv = this.parentNode;
+        btndelDiv.parentNode.removeChild(this.parentNode);
+        let prevSibling = this.previousElementSibling;
+        const index = cities.indexOf(prevSibling.id);
+        if (index > -1) {
+            cities.splice(index, 1);
+        }
+        localStorage.setItem("cities", JSON.stringify(cities));
+    })
 }
