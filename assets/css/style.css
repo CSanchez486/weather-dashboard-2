@@ -6,6 +6,13 @@
     /* background-color: #A0ACBD; */
 }
 
+header {
+    grid-area: header;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+  }
+
 body {
     font-family: 'Economica', sans-serif;
     color: whitesmoke;
@@ -32,7 +39,7 @@ aside {
 }
 
 .newCity {
-    background-color: rgb(172, 177, 189);
+    background-color: #9A9AD0;
     width: 100%;
     border: none;
     padding: 7px;
@@ -40,7 +47,7 @@ aside {
 }
 
 .newCity:hover {
-    background-color: rgb(41, 99, 223);
+    background-color: #E6F4F1;
     color: whitesmoke;
     cursor: pointer;
 }
@@ -115,7 +122,7 @@ input {
 }
 
 .newCity {
-    background-color: rgb(172, 177, 189);
+    background-color: #E6F4F1;
     width: 100%;
     border: none;
     padding: 7px;
@@ -230,19 +237,18 @@ input {
     .btnPlusDelete {
         display: flex;
         justify-content: space-between;
+        background-color: #E6F4F1;
+        
+        
     }
     
     .status-icon {
         padding: 2px 5px;
         margin-left: -100%;
-        background-color: rgb(200, 200, 200);
+        background-color: #FF4B67;
     }
     
     .status-icon:hover {
         background-color: black;
     }
-    
-    .icon-danger {
-        color: rgb(255, 70, 70);
-    }
-    
+ 

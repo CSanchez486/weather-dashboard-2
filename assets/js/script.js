@@ -140,7 +140,6 @@ function fetchOneCall() {
         }
 
         //Update the date for 5 day forecast
-        
         $("#futuredate1").text(tomorrow.format("MM/DD/YY"));
         $("#futuredate2").text(twoDays.format("MM/DD/YY"));
         $("#futuredate3").text(threeDays.format("MM/DD/YY"));
