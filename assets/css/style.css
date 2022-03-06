@@ -163,7 +163,7 @@ input {
 }
 
 .newCity {
-    background-color: #E6F4F1;
+    background-color: #EFEDFF;
     width: 100%;
     border: none;
     padding: 7px;
@@ -197,7 +197,7 @@ input {
 }
 
 .favorable {
-    background-color: rgb(5, 71, 5);
+    background-color: #1EC198;
     max-width: fit-content;
     padding: 5px 10px 5px 10px;
     border-radius: 10px;
@@ -278,7 +278,7 @@ input {
     .btnPlusDelete {
         display: flex;
         justify-content: space-between;
-        background-color: #E6F4F1;
+        background-color: #EFEDFF;
         
         
     }
@@ -294,7 +294,7 @@ input {
         display: inline-block;
         font-size: 16px;
         margin: 4px 2px;
-        border-radius: 50%;
+        border-radius: 25%;
     }
     
     .status-icon:hover {
