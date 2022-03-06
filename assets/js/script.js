@@ -23,13 +23,13 @@ var savedCity;
 var btnPlusDelete;
 
 
-// updates time element on header
-function displayTime(){
-    var rightNow = moment().format ("dddd, MMMM Do YYYY, [at] h:mm:ss a");
-    currentDay.textContent = rightNow;
-}
+// // updates time element on header
+// function displayTime(){
+//     var rightNow = moment().format ("dddd, MMMM Do YYYY, [at] h:mm:ss a");
+//     currentDay.textContent = rightNow;
+// }
 
-setInterval(displayTime,1000);
+// setInterval(displayTime,1000);
 
 // searchbar functionality
 searchButton.addEventListener("click", function(){
@@ -47,7 +47,7 @@ input.addEventListener("keyup", function(event) {
         searchButton.click();
     }
 });
-makeButtons();
+// makeButtons();
 
 //function moves components to left side
 function getApi(city) {
