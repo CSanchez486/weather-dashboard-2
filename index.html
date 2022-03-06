@@ -28,7 +28,7 @@
             <h4>Recently Viewed Cities</h4>
             <p>In Alphabetical Order</p>
             
-            <div id="buttonPlaceholder">
+            <div class="bi bi-trash" id="buttonPlaceholder">
                 
                 <!--Place for buttons to be attached-->
             </div>
@@ -57,88 +57,23 @@
                     <p id="uv" class="inline"></p>
                 </section>
 
-                <div id="fiveDayForecast">
-                    <h3>5 Day Forecast:</h3>
-                    <div id="forecastBoxContainer">
-                        <section>
-                            <h4 id="futuredate1"></h4>
-                            <div class="tooltip">
-                                <img data-icon="1" src="" alt="Weather icon"> 
-                                <span class="tooltiptext"></span>
-                            </div>  
-                            <p data-temp="1"></p>
-                            <p data-wind="1"></p>
-                            <p data-humidity="1"></p>
-                        </section>
-            
-        </div>
-
-
-        <!-- <div class="column side">Column</div> -->
-    </div>
+                
 
     <div class="row">
-        <div class="column side">top
-
-
-        </div>
-
-
-        <div class="column middle">middle
-
-            
-            
-        </div>
-
-
-        <div class="column side">Column</div>
-    </div>
-    
-
-
-
-    
-
-    <!-- <div class="row"> -->
-        <!-- <div class="column side" "> -->
-            
-            
-        </div>
-
-        <main id="mainPage" class="hidden">
-            <div class="column middle">
-                <section id="currentWeather today">
-                    <!--Current Weather will generate here-->
-                    <div class="middle">
-                        <h2 id="currentCity" class="inline"></h2>
-                        <h2 id="currentDate" class="inline"></h2>
-                        <div id="currentIcon" class="tooltip">
-                            <img id="weatherIcon" src="" alt="Weather icon"> 
+        <div class="column side">
+            <div id="fiveDayForecast">
+                <h3>5 Day Forecast:</h3>
+                <div id="forecastBoxContainer">
+                    <section>
+                        <h4 id="futuredate1"></h4>
+                        <div class="tooltip">
+                            <img data-icon="1" src="" alt="Weather icon"> 
                             <span class="tooltiptext"></span>
                         </div>  
-                    </div>
-                    <p id="temp"> </p>
-                    <p id="wind"> </p>
-                    <p id="humidity"> </p>
-                    <p class="inline">UV Index: </p>
-                    <p id="uv" class="inline"></p>
-                </section>
-            </div>
-    
-
-                <div id="fiveDayForecast">
-                    <h3>5 Day Forecast:</h3>
-                    <div id="forecastBoxContainer">
-                        <section>
-                            <h4 id="futuredate1"></h4>
-                            <div class="tooltip">
-                                <img data-icon="1" src="" alt="Weather icon"> 
-                                <span class="tooltiptext"></span>
-                            </div>  
-                            <p data-temp="1"></p>
-                            <p data-wind="1"></p>
-                            <p data-humidity="1"></p>
-                        </section>
+                        <p data-temp="1"></p>
+                        <p data-wind="1"></p>
+                        <p data-humidity="1"></p>
+                    </section>
                         <section>
                             <h4 id="futuredate2"></h4>
                             <div class="tooltip">
@@ -179,10 +114,9 @@
                             <p data-wind="5"></p>
                             <p data-humidity="5"></p>
                         </section>
-                    </div>
-                </div>             
-        </main>       
+        
     </div>
+
     
         
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    

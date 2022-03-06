@@ -36,24 +36,18 @@ header {
     -ms-flex: 2;
     flex: 2;
 }
-  
-  /* Style the footer */
-.footer {
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
-}
-  
+
 
 body {
     font-family: 'Economica', sans-serif;
     color: whitesmoke;
+    background-color: #9A9AD0;
     margin: 30px;
     line-height: 1.5;
     cursor: default;
-    background-image: linear-gradient(to top, #0060f1, #8176ed, #b292eb, #d4b2ec, #ebd6f0);
+    /* background-image: linear-gradient(to top, #0060f1, #8176ed, #b292eb, #d4b2ec, #ebd6f0); */
     background-repeat: no-repeat;
-    background-size: auto;
+    /* background-size: 100%; */
 }
 
 .grid-container {
@@ -122,11 +116,6 @@ aside {
 }
 
 
-/* main {
-    margin: 10px;
-    width: 75%;
-} */
-
 h1{
     font-size: 45px;
     margin: 10px;
@@ -143,7 +132,6 @@ input {
 
 
 #search-button {
-    width: 10%;
     background-color: #6789b0;
     color: whitesmoke;
     border: none;
@@ -296,9 +284,17 @@ input {
     }
     
     .status-icon {
-        padding: 2px 5px;
-        margin-left: -100%;
+        /* padding: 2px 5px;
+        margin-left: -100%; */
+        
         background-color: #FF4B67;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        border-radius: 50%;
     }
     
     .status-icon:hover {
