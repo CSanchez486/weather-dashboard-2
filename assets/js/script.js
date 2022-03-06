@@ -24,12 +24,12 @@ var btnPlusDelete;
 
 
 // // updates time element on header
-// function displayTime(){
-//     var rightNow = moment().format ("dddd, MMMM Do YYYY, [at] h:mm:ss a");
-//     currentDay.textContent = rightNow;
-// }
+function displayTime(){
+    var rightNow = moment().format ("dddd, MMMM Do YYYY, [at] h:mm:ss a");
+    currentDay.textContent = rightNow;
+}
 
-// setInterval(displayTime,1000);
+setInterval(displayTime,1000);
 
 // searchbar functionality
 searchButton.addEventListener("click", function(){
