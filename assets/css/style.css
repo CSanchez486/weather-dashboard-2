@@ -3,7 +3,7 @@
     padding:0;
     box-sizing: border-box;
     font-family: 'Economica', sans-serif;
-    background-color: #8db6d4
+    /* background-color: #A0ACBD; */
 }
 
 body {
@@ -12,7 +12,9 @@ body {
     margin: 30px;
     line-height: 1.5;
     cursor: default;
-    
+    background-image: linear-gradient(to top, #0060f1, #8176ed, #b292eb, #d4b2ec, #ebd6f0);
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 
 aside {

@@ -113,7 +113,7 @@ fetch (cityUrl)
 
 function fetchOneCall() {
     // pulls the lat and lon of current city
-    var uvUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=,minutely,hourly,alerts&appid=" + APIKey + "&units=imperial";
+    var uvUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=,minutely,hourly,alerts&appid=" + apiKey + "&units=imperial";
     // fetches UV and 5 day forecast data
     fetch(uvUrl)
     .then(function (response) {
@@ -140,6 +140,7 @@ function fetchOneCall() {
         }
 
         //Update the date for 5 day forecast
+        
         $("#futuredate1").text(tomorrow.format("MM/DD/YY"));
         $("#futuredate2").text(twoDays.format("MM/DD/YY"));
         $("#futuredate3").text(threeDays.format("MM/DD/YY"));
