@@ -5,7 +5,7 @@ var city;
 var apiKey = '7312f736322322a27fef229205b4ab79';
 var searchForm = document.getElementById('search-box');
 var searchCity = document.getElementsByClassName("form-control")[0];
-var weatherToday = document.getElementById("today");
+var today = moment();
 var fiveDay = document.getElementById("fiveDayForecast");
 var historyForecast = document.getElementById("historyForecast");
 var searchHistory = [];
@@ -250,7 +250,7 @@ function removeAllChildNodes(parent) {
 }
 
 function convertTemp(fahrenheit){
-    var celsius = ((fahrenheit - 32) * .5556).toFixed();
+    var celsius = ((fahrenheit - 32) / 1.8).toFixed();
     return celsius;
 }
 function convertSpeed(mph){
