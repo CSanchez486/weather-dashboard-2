@@ -73,23 +73,6 @@ h1{
     text-align: center;
 }
 
-.card-text {
-    text-align: right;
-    margin-right: 900px;
-}
-    
-
-.card {
-    margin: 0 0 20px 0;
-    background-color: #8db6d4;
-    /* border: none; */
-}
-  
-  .card-body {
-    padding: 3%;
-  }
-
-
 
 input {
     width: 400px;
@@ -170,4 +153,52 @@ input {
     border-radius: 10px;
     color: whitesmoke;
 
+}
+
+.moderate {
+    background-color: rgb(187, 146, 14);
+    max-width: fit-content;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+
+.severe {
+    background-color: rgb(122, 12, 12);
+    max-width: fit-content;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+
+.inline {
+    display: inline;
+}
+
+#forecastBoxContainer {
+    display: flex;
+    direction: row;
+    width: 100%;
+}
+
+#forecastBoxContainer section {
+    padding-bottom: 15px;
+}
+
+#forecastBoxContainer section p {
+    padding-bottom: 10%;
+}
+
+#fiveDayForecast section{
+    background-color: rgb(66, 66, 87);
+    color: whitesmoke;
+    margin: 20px;
+    width: 300px;
+    padding: 10px;
+}
+
+/*Tooltip*/
+.tooltip {
+    position: relative;
+    display: inline;
 }
