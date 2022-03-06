@@ -72,7 +72,7 @@ var cityUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + ',&a
 
 // fetch request for city
 fetch (cityUrl)
-    .then(function(res) {
+    .then(function(response) {
         // error message id city data doesn't pull up
         if (response.status !== 200) {
             alert("That city is not valid");

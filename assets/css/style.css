@@ -202,3 +202,45 @@ input {
     position: relative;
     display: inline;
 }
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 2;
+    bottom: 0%;
+    left: 200%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    }
+    .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    }
+    
+    /* Deletion */
+    .btnPlusDelete {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .status-icon {
+        padding: 2px 5px;
+        margin-left: -100%;
+        background-color: rgb(200, 200, 200);
+    }
+    
+    .status-icon:hover {
+        background-color: black;
+    }
+    
+    .icon-danger {
+        color: rgb(255, 70, 70);
+    }
+    
